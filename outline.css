@@ -1,5 +1,6 @@
-body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14pt;}
-.title, .heading {font-family: 'Palantino Linotype', Georgia, 'Times New Roman', Times, serif;}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14pt; max-width: 50em;padding-left: .5rem;
+    padding-top:2em;}
+.title, .heading, .quote {font-family: 'Palantino Linotype', Georgia, 'Times New Roman', Times, serif;}
 .title {font-size: 1.25em;}
 
 .hidden {display: none;}
@@ -7,16 +8,47 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1
 .read {font-weight: 700;}
 .heading .time {font-weight: 400;}
 .ref {font-style: italic;}
-#stopwatch {position: fixed; bottom: 20px; right: 20px;background-color: #ddd;padding: .5rem;font-weight: 800;font-family: 'Lucida Console', 'Courier New', Courier, monospace;}
+#stopwatch {position: fixed; top: .1em; bottom: auto; right: 5em; left:auto; background-color: #ddd;padding: .5rem;font-weight: 800;font-family: 'Lucida Console', 'Courier New', Courier, monospace;}
+#stopwatch.inactive{background-color: #f55;}
+#stopwatch.armed {top:5rem;right:50%;}
+
+#toolbar {display: inline; position: fixed; bottom: 50px; left: 20px;}
+#toolbar.inactive {display: none;}
+.toolbarButton {display: inline; background-color: #99F; margin: 2rem; padding: 1rem;}
 
 .page {margin: 1cm;}
-.title {margin-bottom: .5rem;}
+.title {margin-bottom: .5rem; text-align: center;}
+.box, .description {padding: .5rem; border: 1px solid;}
+.description{font-size: 1rem; }
+.description + .box {margin-top: -.4rem;border-top: none;}
 .heading {margin-top: 1rem;}
-.level-1 {padding-left: .5rem; text-indent: -.5rem;}
+.level-1, .nexttalk {padding-left: .5rem; text-indent: -.5rem;}
+.nexttalk {padding-top: 1rem;font-weight: 700;}
 .level-2 {padding-left: 1.5rem; text-indent: -.5rem;}
 .level-3 {padding-left: 2.5rem; text-indent: -.5rem;}
-.level-2 + .level-1 {padding-top: .75rem;}
+.level-4 {padding-left: 3.5rem; text-indent: -.5rem;}
+.level-2 + .level-1, .quote + .level-1, .comment + .level-1 {padding-top: .75rem;}
 .level-3 + .level-1 {padding-top: .75rem;}
 .footer {margin-top: 1rem; margin-bottom: 25rem;}
-.comment {background-color: #ddd; padding: .5rem 1.5rem .5rem 1.5rem}
-#watchbutton {padding-right: .5rem; cursor: pointer;};
+.comment, .quote {background-color: #ddd; padding: .5rem 1.5rem .5rem 1.5rem}
+#watchbutton {padding-right: .5rem; cursor: pointer;}
+.quote {padding-left: .25rem; padding-right: .25rem;font-weight: 600;}
+.secondary {font-size: 1.2rem;font-weight: 500;}
+.bracket {font-weight: 400;}
+.quote::before {content: '“';font-size: 2rem;vertical-align: sub;line-height: .5rem;vertical-align: bottom;}
+.quote::after {content: '”';font-size: 2rem;vertical-align: sub;line-height: .5rem;vertical-align: bottom;}
+div p{margin-top: .1rem; margin-bottom: .1rem;}
+div {margin-bottom: .3rem;}
+img{max-height: 10rem;margin-left: auto;margin-right: auto;}
+.picture{text-align: center;}
+.prompt{color:red;}
+.image{display: none;}
+.highlight{background-color: #FF0;}
+@media print {
+    body{padding-block: 0;}
+    #stopwatch{display: none;}
+    .picture{text-align: left;page-break-inside: avoid;page-break-before: avoid; border: black 1px solid;padding: 1em;}
+    .quote, .comment{page-break-before: avoid;}
+    .image{display: inline;}
+    .heading{page-break-after: avoid;page-break-inside: avoid;}
+}
