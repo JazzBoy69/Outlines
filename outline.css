@@ -44,6 +44,8 @@ img{max-height: 10rem;margin-left: auto;margin-right: auto;}
 .prompt{color:red;}
 .image{display: none;}
 .highlight{background-color: #FF0;}
+.verse{position:relative;top:-.5em;font-size:.85rem;}
+.verse::after{content: '\00A0';}
 @media print {
     body{padding-block: 0;}
     #stopwatch{display: none;}
