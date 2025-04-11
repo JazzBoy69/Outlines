@@ -27,6 +27,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1
 .level-2 {padding-left: 1.5rem; text-indent: -.5rem;}
 .level-3 {padding-left: 2.5rem; text-indent: -.5rem;}
 .level-4 {padding-left: 3.5rem; text-indent: -.5rem;}
+.level-5 {padding-left: 4.5rem; text-indent: -.5rem;}
 .level-2 + .level-1, .quote + .level-1, .comment + .level-1, .reference + .level-1 {padding-top: .75rem;}
 .level-3 + .level-1 {padding-top: .75rem;}
 .footer {margin-top: 1rem; margin-bottom: 25rem;}
