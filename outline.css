@@ -4,6 +4,18 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1
 .title {font-size: 1.25em;}
 
 .hidden {display: none;}
+span:has(+ span.hidden)::after {
+    content:'... ';
+}
+span.hidden + span::before {
+    content: ' ...';
+}
+span + span.hidden + span::before {
+    content: '';
+}
+#minutes::before {
+    content: '';
+}
 .heading, .title {font-weight: 800;} 
 .read {font-weight: 700;}
 .heading .time {font-weight: 400;}
