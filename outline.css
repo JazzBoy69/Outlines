@@ -40,10 +40,11 @@ span + span.hidden + span::before {
 .level-3 {padding-left: 2.5rem; text-indent: -.5rem;}
 .level-4 {padding-left: 3.5rem; text-indent: -.5rem;}
 .level-5 {padding-left: 4.5rem; text-indent: -.5rem;}
-.level-2 + .level-1, .quote + .level-1, .comment + .level-1, .reference + .level-1 {padding-top: .75rem;}
+.level-2 + .level-1, .quote + .level-1, .comment + .level-1, .reference + .level-1, .video + .level-1 {padding-top: .75rem;}
 .level-3 + .level-1 {padding-top: .75rem;}
 .footer {margin-top: 1rem; margin-bottom: 25rem;}
-.comment, .quote, .reference {background-color: #ddd; padding: .5rem 1.5rem .5rem 1.5rem}
+.comment, .quote, .reference, .video {background-color: #ddd; padding: .5rem 1.5rem .5rem 1.5rem}
+.video {font-weight: 600}
 #watchbutton {padding-right: .5rem; cursor: pointer;}
 .quote {padding-left: .25rem; padding-right: .25rem;font-weight: 600;}
 .secondary {font-size: 1.2rem;font-weight: 500;}
@@ -63,7 +64,7 @@ img{max-height: 10rem;margin-left: auto;margin-right: auto;}
     body{padding-block: 0;}
     #stopwatch{display: none;}
     .picture{text-align: left;page-break-inside: avoid;page-break-before: avoid; border: black 1px solid;padding: 1em;}
-    .quote, .comment, .reference{page-break-before: avoid;}
+    .quote, .comment, .video, .reference{page-break-before: avoid;}
     .image{display: inline;}
     .heading{page-break-after: avoid;page-break-inside: avoid;}
 }
